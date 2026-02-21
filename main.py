@@ -158,3 +158,14 @@ def db_topology(db: Session = Depends(get_db)):
 def db_topology_api(db: Session = Depends(get_db)):
     """Estructura de la BD"""
     return db_topology(db)
+
+
+# Intento de incluir las rutas del chatbot si el módulo existe.
+# Esto permite que `/api/chat` (definido en chatbot.py) esté disponible
+# cuando se ejecuta el `app` de `main.py`.
+try:
+    import chatbot as chatbot_module
+    for _route in chatbot_module.app.router.routes:
+        app.router.routes.append(_route)
+except Exception as _e:
+    print(f"Advertencia: no se pudieron añadir rutas del chatbot: {_e}")
