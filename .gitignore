@@ -1,4 +1,4 @@
-si osea# Python cache
+# Python cache
 __pycache__/
 *.py[cod]
 *.pyc
@@ -7,6 +7,7 @@ __pycache__/
 venv/
 env/
 ENV/
+.venv/
 
 # Environment variables
 .env
