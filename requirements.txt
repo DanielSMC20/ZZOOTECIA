@@ -6,3 +6,5 @@ scikit-learn
 sqlalchemy
 mysql-connector-python
 pydantic
+python-dotenv
+requests

@@ -1,0 +1,29 @@
+si osea# Python cache
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large/generated files
+*.log
+*.pkl
+*.h5
+*.pth
+__pycache__/

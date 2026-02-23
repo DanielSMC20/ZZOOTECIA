@@ -1,6 +1,5 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import text
-from database import SessionLocal
 
 def predict_preferences(data: dict, db: Session = None):
     """
@@ -9,6 +8,7 @@ def predict_preferences(data: dict, db: Session = None):
     """
     
     if db is None:
+        from database import SessionLocal
         db = SessionLocal()
     
     try:

@@ -26,7 +26,14 @@ app.add_middleware(
 )
 
 # URL del backend
-BACKEND_URL = "http://localhost:8080"
+import os
+from dotenv import load_dotenv
+
+# Cargar variables de entorno locales
+load_dotenv()
+
+# URL del backend (puede configurarse en .env)
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8080")
 
 
 # ============================================

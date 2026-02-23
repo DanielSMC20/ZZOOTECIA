@@ -1,6 +1,5 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import text
-from database import SessionLocal
 import time
 
 def suggest_promotions(db: Session = None):
@@ -12,6 +11,7 @@ def suggest_promotions(db: Session = None):
     print(f"[PROMOTIONS] Iniciando generación de promociones...")
     
     if db is None:
+        from database import SessionLocal
         db = SessionLocal()
     
     try:
